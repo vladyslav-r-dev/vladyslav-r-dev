@@ -1,102 +1,121 @@
-<svg width="1200" height="320" viewBox="0 0 1200 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<svg width="1200" height="360" viewBox="0 0 1200 360" fill="none"
+     xmlns="http://www.w3.org/2000/svg"
+     role="img"
+     aria-labelledby="title desc">
+
   <title id="title">Vladyslav GitHub Hero</title>
-  <desc id="desc">Dark liquid-style animated hero banner with blue flowing shapes.</desc>
+  <desc id="desc">Animated dark blue liquid hero banner.</desc>
 
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="320" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#040812"/>
-      <stop offset="100%" stop-color="#071326"/>
+
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="360">
+      <stop offset="0%" stop-color="#0D1117"/>
+      <stop offset="55%" stop-color="#0A1222"/>
+      <stop offset="100%" stop-color="#07152D"/>
     </linearGradient>
 
-    <radialGradient id="blobA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-      gradientTransform="translate(930 115) rotate(0) scale(260 180)">
-      <stop stop-color="#3B82F6" stop-opacity="0.65"/>
-      <stop offset="1" stop-color="#3B82F6" stop-opacity="0"/>
-    </radialGradient>
-
-    <radialGradient id="blobB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-      gradientTransform="translate(1010 210) rotate(0) scale(220 160)">
-      <stop stop-color="#2563EB" stop-opacity="0.6"/>
-      <stop offset="1" stop-color="#2563EB" stop-opacity="0"/>
-    </radialGradient>
-
-    <radialGradient id="blobC" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-      gradientTransform="translate(760 235) rotate(0) scale(180 130)">
-      <stop stop-color="#60A5FA" stop-opacity="0.35"/>
-      <stop offset="1" stop-color="#60A5FA" stop-opacity="0"/>
-    </radialGradient>
-
-    <linearGradient id="liquid" x1="0" y1="160" x2="1200" y2="300" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#0A1630"/>
-      <stop offset="45%" stop-color="#163C88"/>
+    <linearGradient id="liquid"
+                    x1="0" y1="230"
+                    x2="1200" y2="360"
+                    gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0D214A"/>
+      <stop offset="40%" stop-color="#173D86"/>
+      <stop offset="72%" stop-color="#1D4ED8"/>
       <stop offset="100%" stop-color="#2563EB"/>
     </linearGradient>
 
-    <linearGradient id="surface" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#60A5FA" stop-opacity="0.15"/>
-      <stop offset="50%" stop-color="#93C5FD" stop-opacity="0.95"/>
-      <stop offset="100%" stop-color="#60A5FA" stop-opacity="0.15"/>
+    <linearGradient id="surface"
+                    x1="0" y1="0"
+                    x2="1200" y2="0"
+                    gradientUnits="userSpaceOnUse">
+      <stop offset="0%"
+            stop-color="#60A5FA"
+            stop-opacity="0.15"/>
+
+      <stop offset="45%"
+            stop-color="#93C5FD"
+            stop-opacity="0.95"/>
+
+      <stop offset="70%"
+            stop-color="#60A5FA"
+            stop-opacity="0.75"/>
+
+      <stop offset="100%"
+            stop-color="#3B82F6"
+            stop-opacity="0.18"/>
     </linearGradient>
 
-    <filter id="blurXL" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="34"/>
+    <radialGradient id="blueGlow"
+                    cx="0"
+                    cy="0"
+                    r="1"
+                    gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(940 150) scale(320 230)">
+      <stop stop-color="#2563EB"
+            stop-opacity="0.38"/>
+
+      <stop offset="1"
+            stop-color="#2563EB"
+            stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="blur"
+            x="-50%"
+            y="-50%"
+            width="200%"
+            height="200%">
+      <feGaussianBlur stdDeviation="35"/>
     </filter>
 
-    <filter id="blurMD" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="18"/>
-    </filter>
+    <filter id="glow"
+            x="-30%"
+            y="-30%"
+            width="160%"
+            height="160%">
+      <feGaussianBlur stdDeviation="5"
+                      result="blur"/>
 
-    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="7" result="b"/>
       <feMerge>
-        <feMergeNode in="b"/>
+        <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
+
   </defs>
 
-  <rect width="1200" height="320" rx="26" fill="url(#bg)"/>
+  <!-- BACKGROUND -->
 
-  <g filter="url(#blurXL)">
-    <ellipse cx="930" cy="118" rx="235" ry="150" fill="url(#blobA)">
-      <animate attributeName="cx" values="930;980;940;930" dur="14s" repeatCount="indefinite"/>
-      <animate attributeName="cy" values="118;96;130;118" dur="14s" repeatCount="indefinite"/>
-      <animate attributeName="rx" values="235;255;230;235" dur="16s" repeatCount="indefinite"/>
-      <animate attributeName="ry" values="150;165;145;150" dur="16s" repeatCount="indefinite"/>
-    </ellipse>
+  <rect width="1200"
+        height="360"
+        fill="url(#bg)"/>
 
-    <ellipse cx="1010" cy="215" rx="205" ry="145" fill="url(#blobB)">
-      <animate attributeName="cx" values="1010;955;1000;1010" dur="17s" repeatCount="indefinite"/>
-      <animate attributeName="cy" values="215;195;230;215" dur="17s" repeatCount="indefinite"/>
-      <animate attributeName="rx" values="205;220;195;205" dur="15s" repeatCount="indefinite"/>
-      <animate attributeName="ry" values="145;155;138;145" dur="15s" repeatCount="indefinite"/>
-    </ellipse>
 
-    <ellipse cx="760" cy="235" rx="165" ry="115" fill="url(#blobC)">
-      <animate attributeName="cx" values="760;810;775;760" dur="18s" repeatCount="indefinite"/>
-      <animate attributeName="cy" values="235;205;228;235" dur="18s" repeatCount="indefinite"/>
-    </ellipse>
-  </g>
+  <!-- BLUE AMBIENT LIGHT -->
 
-  <path fill="url(#liquid)" opacity="0.95">
-    <animate attributeName="d" dur="12s" repeatCount="indefinite"
-      values="
-      M0 220 C120 205 220 242 340 228 C450 215 540 176 645 188 C752 201 862 254 965 242 C1068 230 1135 198 1200 210 L1200 320 L0 320 Z;
-      M0 228 C116 244 245 206 352 194 C458 182 550 215 648 232 C745 249 841 212 950 199 C1057 187 1128 216 1200 206 L1200 320 L0 320 Z;
-      M0 214 C124 191 228 221 334 243 C438 265 541 231 648 212 C758 193 866 205 969 226 C1070 248 1141 239 1200 222 L1200 320 L0 320 Z;
-      M0 220 C120 205 220 242 340 228 C450 215 540 176 645 188 C752 201 862 254 965 242 C1068 230 1135 198 1200 210 L1200 320 L0 320 Z"/>
-  </path>
+  <ellipse cx="940"
+           cy="150"
+           rx="310"
+           ry="220"
+           fill="url(#blueGlow)"
+           filter="url(#blur)">
 
-  <path fill="none" stroke="url(#surface)" stroke-width="3" stroke-linecap="round" opacity="0.95" filter="url(#glow)">
-    <animate attributeName="d" dur="12s" repeatCount="indefinite"
-      values="
-      M0 220 C120 205 220 242 340 228 C450 215 540 176 645 188 C752 201 862 254 965 242 C1068 230 1135 198 1200 210;
-      M0 228 C116 244 245 206 352 194 C458 182 550 215 648 232 C745 249 841 212 950 199 C1057 187 1128 216 1200 206;
-      M0 214 C124 191 228 221 334 243 C438 265 541 231 648 212 C758 193 866 205 969 226 C1070 248 1141 239 1200 222;
-      M0 220 C120 205 220 242 340 228 C450 215 540 176 645 188 C752 201 862 254 965 242 C1068 230 1135 198 1200 210"/>
-  </path>
+    <animate attributeName="cx"
+             values="940;1010;960;940"
+             dur="15s"
+             repeatCount="indefinite"/>
 
-  <text x="70" y="78"
+    <animate attributeName="cy"
+             values="150;130;165;150"
+             dur="15s"
+             repeatCount="indefinite"/>
+
+  </ellipse>
+
+
+  <!-- TEXT -->
+
+  <text x="70"
+        y="70"
         fill="#60A5FA"
         font-family="Inter, Segoe UI, Arial, sans-serif"
         font-size="15"
@@ -105,27 +124,125 @@
     GITHUB PROFILE
   </text>
 
-  <text x="70" y="138"
+  <text x="70"
+        y="132"
         fill="#F8FAFC"
         font-family="Inter, Segoe UI, Arial, sans-serif"
-        font-size="56"
+        font-size="58"
         font-weight="800">
     Vladyslav
   </text>
 
-  <text x="70" y="178"
+  <text x="70"
+        y="174"
         fill="#BFDBFE"
         font-family="Inter, Segoe UI, Arial, sans-serif"
-        font-size="26"
+        font-size="27"
         font-weight="600">
     Full-Stack Developer
   </text>
 
-  <text x="70" y="216"
-        fill="#CBD5E1"
+  <text x="70"
+        y="211"
+        fill="#94A3B8"
         font-family="Inter, Segoe UI, Arial, sans-serif"
-        font-size="20"
+        font-size="19"
         font-weight="400">
     Building clean, thoughtful web applications.
   </text>
+
+
+  <!-- LIQUID -->
+
+  <path fill="url(#liquid)">
+    <animate
+      attributeName="d"
+      dur="11s"
+      repeatCount="indefinite"
+
+      values="
+
+      M0 270
+      C120 248 220 282 345 268
+      C470 254 565 232 680 246
+      C795 261 885 292 995 280
+      C1080 271 1145 248 1200 258
+      L1200 360
+      L0 360
+      Z;
+
+      M0 260
+      C115 278 230 252 350 244
+      C470 235 575 268 690 277
+      C805 286 900 253 1005 244
+      C1090 237 1150 257 1200 250
+      L1200 360
+      L0 360
+      Z;
+
+      M0 278
+      C130 248 230 260 350 284
+      C470 305 580 278 690 259
+      C800 241 905 247 1000 267
+      C1090 286 1150 279 1200 266
+      L1200 360
+      L0 360
+      Z;
+
+      M0 270
+      C120 248 220 282 345 268
+      C470 254 565 232 680 246
+      C795 261 885 292 995 280
+      C1080 271 1145 248 1200 258
+      L1200 360
+      L0 360
+      Z
+
+      "/>
+  </path>
+
+
+  <!-- LIQUID HIGHLIGHT -->
+
+  <path fill="none"
+        stroke="url(#surface)"
+        stroke-width="3"
+        stroke-linecap="round"
+        filter="url(#glow)">
+
+    <animate
+      attributeName="d"
+      dur="11s"
+      repeatCount="indefinite"
+
+      values="
+
+      M0 270
+      C120 248 220 282 345 268
+      C470 254 565 232 680 246
+      C795 261 885 292 995 280
+      C1080 271 1145 248 1200 258;
+
+      M0 260
+      C115 278 230 252 350 244
+      C470 235 575 268 690 277
+      C805 286 900 253 1005 244
+      C1090 237 1150 257 1200 250;
+
+      M0 278
+      C130 248 230 260 350 284
+      C470 305 580 278 690 259
+      C800 241 905 247 1000 267
+      C1090 286 1150 279 1200 266;
+
+      M0 270
+      C120 248 220 282 345 268
+      C470 254 565 232 680 246
+      C795 261 885 292 995 280
+      C1080 271 1145 248 1200 258
+
+      "/>
+
+  </path>
+
 </svg>
