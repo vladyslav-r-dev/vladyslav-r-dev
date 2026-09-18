@@ -32,10 +32,9 @@ I enjoy building complete web applications with clean structure, maintainable co
 <p align="center">
   <a href="mailto:vlad.r.dev@gmail.com">
     <img
-      src="https://img.shields.io/badge/Email-0D1117?style=for-the-badge&logo=gmail&logoColor=3B82F6"
+      src="https://img.shields.io/badge/EMAIL-0D1117?style=for-the-badge&logo=gmail&logoColor=3B82F6&labelColor=0D1117"
       alt="Email"
+      height="32"
     />
   </a>
 </p>
-
-<br>
