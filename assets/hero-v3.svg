@@ -1,0 +1,181 @@
+<svg width="1200" height="360" viewBox="0 0 1200 360" fill="none"
+     xmlns="http://www.w3.org/2000/svg"
+     role="img"
+     aria-labelledby="title desc">
+
+  <title id="title">Vladyslav Hero Banner</title>
+  <desc id="desc">Animated dark liquid hero banner with blue flowing surface.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0D1117"/>
+      <stop offset="52%" stop-color="#0A1222"/>
+      <stop offset="100%" stop-color="#07152D"/>
+    </linearGradient>
+
+    <linearGradient id="liquid" x1="0" y1="240" x2="1200" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0D214A"/>
+      <stop offset="38%" stop-color="#173D86"/>
+      <stop offset="72%" stop-color="#1D4ED8"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+
+    <linearGradient id="surface" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#60A5FA" stop-opacity="0.10"/>
+      <stop offset="45%" stop-color="#DBEAFE" stop-opacity="0.95"/>
+      <stop offset="70%" stop-color="#93C5FD" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0.12"/>
+    </linearGradient>
+
+    <radialGradient id="glowA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+      gradientTransform="translate(930 125) scale(320 230)">
+      <stop stop-color="#2563EB" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#2563EB" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="glowB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+      gradientTransform="translate(780 170) scale(180 130)">
+      <stop stop-color="#60A5FA" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#60A5FA" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="blurXL" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="34"/>
+    </filter>
+
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="360" fill="url(#bg)"/>
+
+  <!-- Ambient glows -->
+  <ellipse cx="930" cy="125" rx="300" ry="215" fill="url(#glowA)" filter="url(#blurXL)">
+    <animate attributeName="cx" values="930;1000;950;930" dur="16s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="125;105;140;125" dur="16s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <ellipse cx="780" cy="170" rx="170" ry="120" fill="url(#glowB)" filter="url(#blurXL)">
+    <animate attributeName="cx" values="780;820;790;780" dur="18s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="170;150;180;170" dur="18s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Small subtle accent -->
+  <circle cx="78" cy="58" r="4" fill="#60A5FA">
+    <animate attributeName="opacity" values="0.9;0.35;0.9" dur="4s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Text -->
+  <text x="70"
+        y="128"
+        fill="#F8FAFC"
+        font-family="Inter, Segoe UI, Arial, sans-serif"
+        font-size="60"
+        font-weight="800">
+    Vladyslav
+  </text>
+
+  <text x="70"
+        y="172"
+        fill="#BFDBFE"
+        font-family="Inter, Segoe UI, Arial, sans-serif"
+        font-size="28"
+        font-weight="600">
+    Full-Stack Developer
+  </text>
+
+  <text x="70"
+        y="212"
+        fill="#94A3B8"
+        font-family="Inter, Segoe UI, Arial, sans-serif"
+        font-size="20"
+        font-weight="400">
+    Building clean, thoughtful web applications.
+  </text>
+
+  <!-- Main liquid body -->
+  <path fill="url(#liquid)">
+    <animate
+      attributeName="d"
+      dur="10.5s"
+      repeatCount="indefinite"
+      values="
+      M0 272
+      C110 248 230 284 352 270
+      C470 256 566 233 682 248
+      C800 264 891 294 1002 282
+      C1088 272 1148 250 1200 260
+      L1200 360
+      L0 360
+      Z;
+
+      M0 260
+      C118 279 235 252 355 244
+      C474 236 582 270 696 279
+      C809 288 902 254 1007 244
+      C1090 236 1152 258 1200 252
+      L1200 360
+      L0 360
+      Z;
+
+      M0 280
+      C130 250 242 262 360 286
+      C478 308 588 280 700 260
+      C813 241 920 247 1014 268
+      C1099 287 1155 280 1200 267
+      L1200 360
+      L0 360
+      Z;
+
+      M0 272
+      C110 248 230 284 352 270
+      C470 256 566 233 682 248
+      C800 264 891 294 1002 282
+      C1088 272 1148 250 1200 260
+      L1200 360
+      L0 360
+      Z"/>
+  </path>
+
+  <!-- Surface highlight -->
+  <path fill="none"
+        stroke="url(#surface)"
+        stroke-width="3"
+        stroke-linecap="round"
+        filter="url(#glow)">
+    <animate
+      attributeName="d"
+      dur="10.5s"
+      repeatCount="indefinite"
+      values="
+      M0 272
+      C110 248 230 284 352 270
+      C470 256 566 233 682 248
+      C800 264 891 294 1002 282
+      C1088 272 1148 250 1200 260;
+
+      M0 260
+      C118 279 235 252 355 244
+      C474 236 582 270 696 279
+      C809 288 902 254 1007 244
+      C1090 236 1152 258 1200 252;
+
+      M0 280
+      C130 250 242 262 360 286
+      C478 308 588 280 700 260
+      C813 241 920 247 1014 268
+      C1099 287 1155 280 1200 267;
+
+      M0 272
+      C110 248 230 284 352 270
+      C470 256 566 233 682 248
+      C800 264 891 294 1002 282
+      C1088 272 1148 250 1200 260"/>
+  </path>
+</svg>
